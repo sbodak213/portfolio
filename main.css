@@ -1,0 +1,110 @@
+body{
+    height: 710px;
+    width: 100%;
+    background-image: linear-gradient(#1a2a55 50%, #11499e, #1a2a55);
+}
+
+/* navbarcontainer ------------------------------*/
+.navcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+
+/* buttons */
+.btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    position: relative;
+    margin: 0 auto;
+    font-family: 'Comfortaa', cursive;
+    font-size: 10pt;
+    color: white;
+    background: linear-gradient(#11499e, #1a2a55 );
+    width: 150px;
+    height: 27px;
+    clip-path: polygon(17% 0, 100% 0, 83% 100%, 0 100%);
+}
+
+.btn::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, rgba(26, 42, 85, 0%), rgba(236, 0, 140, 100%), rgba(26, 42, 85, 0%));
+    left: 0;
+    bottom: 0;
+}
+
+/* Home Button */
+.btn-home::after{
+    transform: scale(0 ,1);
+    transition: transform 0.2s ease-out;
+}
+
+.btn-home:hover::after{
+    transform: scale(1 ,1);
+}
+
+/* Portfolio Button */
+.btn-portfolio::after{
+    transform: scale(0 ,1);
+    transition: transform 0.2s ease-out;
+}
+
+.btn-portfolio:hover::after{
+    transform: scale(1 ,1);
+}
+
+/* About Me Button */
+.btn-aboutme::after{
+    transform: scale(0 ,1);
+    transition: transform 0.2s ease-out;
+}
+
+.btn-aboutme:hover::after{
+    transform: scale(1 ,1);
+}
+
+/* Contact Me Button */
+.btn-contactme::after{
+    transform: scale(0 ,1);
+    transition: transform 0.2s ease-out;
+}
+
+.btn-contactme:hover::after{
+    transform: scale(1 ,1);
+}
+
+/* Logo */
+.logo{
+    position: fixed;
+    right: 30px;
+    top: 25px;
+    width: 90px;
+}
+
+.project1flyer{
+    max-width: 50%;
+}
+
+/* bodycontainer ------------------------------------*/
+.bodycontainer{
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    right: 350px;
+}
+
+.textbody{
+    font-family: 'Lexend', sans-serif;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 70%);
+    padding: 3px;
+}
