@@ -1,15 +1,92 @@
 body{
-    height: 710px;
     width: 100%;
-    background-image: linear-gradient(#1a2a55 50%, #11499e, #1a2a55);
+    background-image: linear-gradient(#1a2a55 55%, #11499e, #1a2a55);
+    height: 100vh;
+    
 }
 
-/* navbarcontainer ------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    /* border-style: dashed; */
+     box-sizing: border-box;
+    }
+
+  /* @media screen and (max-width: 600px) {
+  .container {
+      height: 100%;
+      display: grid;
+      grid-gap: 3px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+          "q"
+          "h"
+          "e"
+          "b"
+          "f";
+  } */
+  
+  /* step two - build your grid desktop and tablet grid*/
+  /* .container {
+      height: 100%;
+      display: grid;
+      grid-gap: 3px;
+      this will be  the same for everyone
+      grid-template-columns: repeat(2, 1fr);
+      this will be customized, based on your grid, use pixels or %
+      grid-template-rows: auto;
+      use letters from step 1 to build the grid
+      grid-template-areas: 
+          "h h"
+          "x e"
+          "x w"
+          "f f";
+  } */
+  
+  /* step three - build your mobile grid, what becomes active when the pixels are 800px or less */
+  /* @media screen and (max-width: 800px) { */
+      
+    .container{
+          display: grid;
+          grid-gap: 3px;
+          /* grid is only one column, keep this way */
+          grid-template-columns: 1fr;
+          /* you can enter values, or auto will adjust the box sizes based on content */
+          grid-template-rows: auto;
+          grid-template-areas:
+          "nav"
+          "ic"
+          "amc"
+          "f";
+      }
+  /* } */
+
+  .navcontainer{
+      grid-area: nav;
+  }
+  
+  .imagecontainer{
+      grid-area: ic;
+  }
+
+  .aboutmecontainer {
+      grid-area: amc;
+  }
+  
+  footer{
+      grid-area: f;
+  }
+
+/* navbarcontainer --------------------------------------*/
 .navcontainer{
     display: flex;
     flex-wrap: wrap;
     position: fixed;
-    padding-top: 15px;
+    grid-area: nav;
+    z-index: 5;
+    padding-top: 20px;
     padding-bottom: 50px;
     padding-left: 30px;
 }
@@ -90,21 +167,54 @@ body{
     width: 90px;
 }
 
-.project1flyer{
-    max-width: 50%;
+/* Image Container --------------------------------------*/
+.imagecontainer{
+    display: grid;
+    margin-top: 150px;
+    grid-area: ic;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ".a b."
+    ;
+    box-sizing: border-box;
+    border-style: dashed;
+    color: red;
+    padding: 30px;
 }
 
-/* bodycontainer ------------------------------------*/
-.bodycontainer{
-    position: absolute;
-    top: 120px;
-    left: 20px;
-    right: 350px;
+.imagecontainer img{
+    width: 400px;
+}
+
+/* About Me Container ------------------------------------*/
+.aboutmecontainer{
+    grid-area: amc;
+    box-sizing: border-box;
+    border-style: dashed;
+    border-color: red;
+    padding: 80px 650px 80px 30px;
 }
 
 .textbody{
     font-family: 'Lexend', sans-serif;
     font-weight: bold;
+    font-size: 15pt;
     background-color: rgba(255, 255, 255, 70%);
-    padding: 3px;
+    padding: 5px 10px 5px 5px;
+}
+
+/* Footer */
+
+/* Icon Container ----------------------------------------*/
+.iconcontainer{
+    display: grid;
+    position: fixed;
+    padding-left: 45vw;
+    padding-top: 650px;
+    grid-gap: 35px;
+    grid-template-columns: 45px 45px 45px; 
+    grid-template-rows: 10px;
+    grid-template-areas: 
+    "a" "b" "c";
 }
