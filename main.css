@@ -2,7 +2,6 @@ body{
     width: 100%;
     background-image: linear-gradient(#1a2a55 55%, #11499e, #1a2a55);
     height: 100vh;
-    
 }
 
 
@@ -65,6 +64,7 @@ body{
 
   .navcontainer{
       grid-area: nav;
+      position: fixed;
   }
   
   .imagecontainer{
@@ -129,16 +129,6 @@ body{
     transform: scale(1 ,1);
 }
 
-/* Portfolio Button */
-.btn-portfolio::after{
-    transform: scale(0 ,1);
-    transition: transform 0.2s ease-out;
-}
-
-.btn-portfolio:hover::after{
-    transform: scale(1 ,1);
-}
-
 /* About Me Button */
 .btn-aboutme::after{
     transform: scale(0 ,1);
@@ -172,10 +162,10 @@ body{
     display: grid;
     margin-top: 150px;
     grid-area: ic;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    ".a b."
+    ".a b c d."
     ;
     box-sizing: border-box;
     border-style: dashed;
@@ -184,11 +174,18 @@ body{
 }
 
 .imagecontainer img{
-    width: 400px;
+    width: 300px;
 }
 
 /* About Me Container ------------------------------------*/
 .aboutmecontainer{
+    display: grid;
+    grid-gap: 150px;
+    grid-template-columns: 600px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "a b "
+    ;
     grid-area: amc;
     box-sizing: border-box;
     border-style: dashed;
@@ -200,8 +197,14 @@ body{
     font-family: 'Lexend', sans-serif;
     font-weight: bold;
     font-size: 15pt;
-    background-color: rgba(255, 255, 255, 70%);
+    color: white;
+    letter-spacing: 1px;
+    /* background-color: rgba(255, 255, 255, 70%); */
     padding: 5px 10px 5px 5px;
+}
+
+.aboutmecontainer img{
+    width: 300px;
 }
 
 /* Footer */
@@ -212,8 +215,8 @@ body{
     position: fixed;
     padding-left: 45vw;
     padding-top: 650px;
-    grid-gap: 35px;
-    grid-template-columns: 45px 45px 45px; 
+    grid-gap: 50px;
+    grid-template-columns: 50px 50px 50px; 
     grid-template-rows: 10px;
     grid-template-areas: 
     "a" "b" "c";
