@@ -20,11 +20,10 @@ body{
       grid-template-columns: 1fr;
       grid-template-rows: auto;
       grid-template-areas: 
-          "q"
-          "h"
-          "e"
-          "b"
-          "f";
+      "nav"
+      "ic"
+      "amc"
+      "f";
   } */
   
   /* step two - build your grid desktop and tablet grid*/
@@ -79,19 +78,19 @@ body{
       grid-area: f;
   }
 
-/* navbarcontainer --------------------------------------*/
+/* NAVBARCONTAINER --------------------------------------*/
 .navcontainer{
     display: flex;
     flex-wrap: wrap;
     position: fixed;
     grid-area: nav;
     z-index: 5;
-    padding-top: 20px;
+    padding-top: 25px;
     padding-bottom: 50px;
     padding-left: 30px;
 }
 
-/* buttons */
+/* BUTTONS */
 .btn{
     display: flex;
     flex-direction: column;
@@ -119,7 +118,7 @@ body{
     bottom: 0;
 }
 
-/* Home Button */
+/* HOME BUTTON */
 .btn-home::after{
     transform: scale(0 ,1);
     transition: transform 0.2s ease-out;
@@ -129,7 +128,7 @@ body{
     transform: scale(1 ,1);
 }
 
-/* About Me Button */
+/* ABOUT ME BUTTON */
 .btn-aboutme::after{
     transform: scale(0 ,1);
     transition: transform 0.2s ease-out;
@@ -139,7 +138,7 @@ body{
     transform: scale(1 ,1);
 }
 
-/* Contact Me Button */
+/* CONTACT ME BUTTON */
 .btn-contactme::after{
     transform: scale(0 ,1);
     transition: transform 0.2s ease-out;
@@ -149,35 +148,52 @@ body{
     transform: scale(1 ,1);
 }
 
-/* Logo */
+/* RESUME BUTTON */
+.btn-resume::after{
+    transform: scale(0 ,1);
+    transition: transform 0.2s ease-out;
+}
+
+.btn-resume:hover::after{
+    transform: scale(1 ,1);
+}
+
+/* LOGO */
 .logo{
     position: fixed;
     right: 30px;
     top: 25px;
-    width: 90px;
+    width: 100px;
 }
 
-/* Image Container --------------------------------------*/
+/* IMAGE CONTAINER --------------------------------------*/
 .imagecontainer{
     display: grid;
-    margin-top: 150px;
+    
     grid-area: ic;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
     ".a b c d."
     ;
-    box-sizing: border-box;
+    max-width: 100vw;
+    /* box-sizing: border-box;
     border-style: dashed;
-    color: red;
-    padding: 30px;
+    color: red; */
+    margin-top: 250px;
+    margin-bottom: 100px;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 .imagecontainer img{
     width: 300px;
 }
 
-/* About Me Container ------------------------------------*/
+/* ABOBUT ME CONTAINER ------------------------------------*/
 .aboutmecontainer{
     display: grid;
     grid-gap: 150px;
@@ -186,11 +202,12 @@ body{
     grid-template-areas: 
     "a b "
     ;
+    max-width: 100vw;
     grid-area: amc;
-    box-sizing: border-box;
+    /* box-sizing: border-box;
     border-style: dashed;
-    border-color: red;
-    padding: 80px 650px 80px 30px;
+    border-color: red; */
+    /* padding: 80px 65px 80px 30px; */
 }
 
 .textbody{
@@ -200,16 +217,26 @@ body{
     color: white;
     letter-spacing: 1px;
     /* background-color: rgba(255, 255, 255, 70%); */
-    padding: 5px 10px 5px 5px;
+    padding: 5px 10px 5px 30px;
 }
 
 .aboutmecontainer img{
     width: 300px;
 }
 
-/* Footer */
+.buttoncontainer{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 5;
+    grid-area: amc;
+    right: 550px;
+    bottom: 300px;
+}
 
-/* Icon Container ----------------------------------------*/
+/* FOOTER */
+
+/* ICON CONTAINER ----------------------------------------*/
 .iconcontainer{
     display: grid;
     position: fixed;
