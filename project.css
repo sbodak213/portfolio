@@ -1,0 +1,156 @@
+body{
+    width: 99%;
+    background-image: linear-gradient(#1a2a55 55%, #11499e, #1a2a55);
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    /* grid-gap: 3px; */
+    /* grid is only one column, keep this way */
+    grid-template-columns: 1fr;
+    /* you can enter values, or auto will adjust the box sizes based on content */
+    grid-template-rows: auto;
+    grid-template-areas:
+    "nav"
+    "ic"
+    "f";
+}
+
+.navcontainer{
+    grid-area: nav;
+    position: fixed;
+}
+
+.imagecontainer{
+    grid-area: ic;
+}
+
+footer{
+    grid-area: f;
+}
+
+/* NAVBARCONTAINER -------------------------------------------*/
+.navcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    grid-area: nav;
+    z-index: 5;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    padding-left: 60px;
+}
+
+/* BUTTONS */
+.btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    position: relative;
+    margin: 0 auto;
+    font-family: 'Comfortaa', cursive;
+    font-size: 10pt;
+    color: white;
+    background: linear-gradient(#11499e, #1a2a55 );
+    width: 150px;
+    height: 27px;
+    clip-path: polygon(17% 0, 100% 0, 83% 100%, 0 100%);
+}
+
+.btn::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, rgba(26, 42, 85, 0%), rgba(236, 0, 140, 100%), rgba(26, 42, 85, 0%));
+    left: 0;
+    bottom: 0;
+}
+
+/* HOME BUTTON */
+.btn-home::after{
+    transform: scale(0 ,1);
+    transition: transform 0.2s ease-out;
+}
+
+.btn-home:hover::after{
+    transform: scale(1 ,1);
+}
+
+/* ABOUT ME BUTTON */
+.btn-aboutme::after{
+    transform: scale(0 ,1);
+    transition: transform 0.2s ease-out;
+}
+
+.btn-aboutme:hover::after{
+    transform: scale(1 ,1);
+}
+
+/* RESUME BUTTON */
+.btn-resume::after{
+    transform: scale(0 ,1);
+    transition: transform 0.2s ease-out;
+}
+
+.btn-resume:hover::after{
+    transform: scale(1 ,1);
+}
+
+/* LOGO */
+.logo{
+    position: fixed;
+    right: 60px;
+    top: 25px;
+    width: 100px;
+}
+
+/* IMAGE CONTAINER -------------------------------------------*/
+.imagecontainer{
+    display:grid;
+    max-width: 1355px;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "a b "
+    "c"
+    ;
+    margin-top: 200px;
+    padding-left: 60px;
+    /* box-sizing: border-box;
+    border-style: dashed;
+    border-color: red; */
+}
+
+.imagecontainer img{
+    width: 520px;
+}
+
+.textbody{
+    font-family: 'Lexend', sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+    color: white;
+    letter-spacing: 1px;
+    /* background-color: rgba(255, 255, 255, 70%); */
+    padding: 5px 60px 5px 5px;
+}
+
+
+
+/* ICON CONTAINER ---------------------------------------------*/
+.iconcontainer{
+    display: grid;
+    position: fixed;
+    bottom: -80px;
+    padding-left: 40vw;
+    grid-gap: 70px;
+    grid-template-columns: 50px 50px 50px; 
+    grid-template-rows: 10px;
+    grid-template-areas: 
+    "a" "b" "c";
+}

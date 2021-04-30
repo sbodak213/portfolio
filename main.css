@@ -24,8 +24,8 @@ body{
       "ic"
       "amc"
       "f";
-  } */
-  
+  }
+   */
   /* step two - build your grid desktop and tablet grid*/
   /* .container {
       height: 100%;
@@ -37,10 +37,9 @@ body{
       grid-template-rows: auto;
       use letters from step 1 to build the grid
       grid-template-areas: 
-          "h h"
-          "x e"
-          "x w"
-          "f f";
+      "nav ic"
+      "amc f"
+      ;
   } */
   
   /* step three - build your mobile grid, what becomes active when the pixels are 800px or less */
@@ -48,7 +47,7 @@ body{
       
     .container{
           display: grid;
-          grid-gap: 3px;
+          /* grid-gap: 3px; */
           /* grid is only one column, keep this way */
           grid-template-columns: 1fr;
           /* you can enter values, or auto will adjust the box sizes based on content */
@@ -78,7 +77,9 @@ body{
       grid-area: f;
   }
 
-/* NAVBARCONTAINER --------------------------------------*/
+
+
+/* NAVBARCONTAINER -------------------------------------------*/
 .navcontainer{
     display: flex;
     flex-wrap: wrap;
@@ -87,7 +88,10 @@ body{
     z-index: 5;
     padding-top: 25px;
     padding-bottom: 50px;
-    padding-left: 30px;
+    padding-left: 60px;
+    /* box-sizing: border-box;
+    border-style: dashed;
+    color: red; */
 }
 
 /* BUTTONS */
@@ -151,12 +155,14 @@ body{
 /* LOGO */
 .logo{
     position: fixed;
-    right: 30px;
+    right: 60px;
     top: 25px;
     width: 100px;
 }
 
-/* IMAGE CONTAINER --------------------------------------*/
+
+
+/* IMAGE CONTAINER -------------------------------------------*/
 .imagecontainer{
     display: grid;
     grid-area: ic;
@@ -165,36 +171,37 @@ body{
     grid-template-areas: 
     ".a b c d."
     ;
-    max-width: 100vw;
-    grid-gap: 85px;
+    max-width: 90vw;
+    grid-gap: 65px;
     /* box-sizing: border-box;
     border-style: dashed;
     color: red; */
     margin-top: 200px;
-    margin-bottom: 400px;
-    padding-left: 30px;
-    padding-right: 20px;
+    margin-bottom: 300px;
+    padding-left: 60px;
+    padding-right: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
-
 }
 
 .imagecontainer img{
     width: 300px;
 }
 
-/* ABOBUT ME CONTAINER ------------------------------------*/
+
+
+/* ABOBUT ME CONTAINER -----------------------------------------*/
 .aboutmecontainer{
     display: grid;
-    grid-gap: 385px;
-    grid-template-columns: 800px 1fr;
-    grid-template-rows: auto;
+    grid-gap: 305px;
+    grid-template-columns: 850px 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
     "a b "
     ;
     max-width: 100vw;
     grid-area: amc;
-    margin-bottom: 120px;
+    margin-bottom: 150px;
     /* box-sizing: border-box;
     border-style: dashed;
     border-color: red; */
@@ -207,39 +214,33 @@ body{
     color: white;
     letter-spacing: 1px;
     /* background-color: rgba(255, 255, 255, 70%); */
-    padding: 5px 10px 5px 30px;
+    padding: 5px 10px 5px 60px;
 }
 
 .aboutmecontainer img{
     width: 300px;
 }
 
+.buttoncontainer{
+    grid-area: amc;
+}
+
 
 
 /* FOOTER */
 
-.buttoncontainer{
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 10;
-}
-
-.btn-resume{
-    position: absolute;
-    right: 130px;
-    top: 1410px;
-}
-
-/* ICON CONTAINER ----------------------------------------*/
+/* ICON CONTAINER ---------------------------------------------*/
 .iconcontainer{
     display: grid;
     position: fixed;
-    padding-left: 44vw;
-    padding-top: 650px;
+    bottom: -80px;
+    padding-left: 40vw;
     grid-gap: 70px;
     grid-template-columns: 50px 50px 50px; 
     grid-template-rows: 10px;
     grid-template-areas: 
     "a" "b" "c";
+    /* box-sizing: border-box;
+    border-style: dashed;
+    color: red; */
 }
