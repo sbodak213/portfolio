@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Project 4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="parallax.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="icon" type="image/png" href="portfolioassets/Favicon3.png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" media="screen" href="project.css">
+    <link rel="icon" type="image/png" href="Favicon3.png" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:italic,100,800" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
@@ -15,13 +14,16 @@
 
 </head>
 <body>
-     <!-- NAV BAR CONTAINER --------------------------------------------->
+  <div class="container">
+
+    <!-- NAV BAR CONTAINER --------------------------------------------->
       
         <!-- BUTTONS -->
-        <div class="navcontainer">
+          <div class="navcontainer">
+            <a>
             <button class="btn btn-home">Home</button>
+            </a>
             <button class="btn btn-aboutme">About Me</button>
-            <button class="btn btn-contactme">Contact Me</button>
             <link rel="preconnect" href="https://fonts.gstatic.com">
             <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
           </div>  
@@ -29,15 +31,15 @@
             <!-- LOGO -->
             <div class="logo">
               <img src="portfolioassets/Logoicon.svg">
-            </div>
+            </div>  
 
         <!-- PROJECT 4 IMAGES -->
-
-            <div class="project4">
-                <img src="project4/project4image.png">
+        <section class="imagecontainer">
+            <div>
+                <img src="project4/project4gallery1.png">
             </div>
 
-            <section>
+              <div class="textbody">
                 <p>
                     Typographic Syntax was the subject of this project in my Intro to Graphic
                     Design class. We had to take a phenomenon and have the word resemble it's 
@@ -48,6 +50,41 @@
                     I also felt it was good to enter in our school's art festival and it was 
                     showcased in the gallery.
                 </p>
-            </section>
+                <link rel="preconnect" href="https://fonts.gstatic.com">
+                <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap" rel="stylesheet">
+              </div>
+
+              <div>
+                <img src="project4/project4gallery.png">
+              </div>
+        </section> 
+        
+      <!-- FOOTER -->
+      
+      <!-- ICON CONTAINER ------------------------------------------------>
+      <section class="iconcontainer">
+        
+        <!-- EMAIL ICON -->
+          <div>
+            <a href="mailto: emailhere">
+              <img src="portfolioassets/EmailIcon.svg">
+            </a>
+          </div>
+
+        <!-- LINKEDIN ICON -->
+          <div>
+            <a href="https://www.linkedin.com/in/steven-bodak">
+              <img src="portfolioassets/CustomLinkedinIcon.svg">
+            </a>  
+          </div>
+
+        <!-- LINKTREE ICON -->
+          <div>
+            <a href="https://sbodak213.github.io/linktree/">
+              <img src="portfolioassets/linktreeicon.svg">
+            </a>  
+          </div>
+      </section> 
+  </div>        
 </body>
 </html>
