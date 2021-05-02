@@ -24,8 +24,8 @@ body{
       "ic"
       "amc"
       "f";
-  }
-   */
+  } */
+  
   /* step two - build your grid desktop and tablet grid*/
   /* .container {
       height: 100%;
@@ -188,6 +188,10 @@ body{
     width: 300px;
 }
 
+.imagecontainer img:hover{
+    animation: pulse 1s;
+}
+
 
 
 /* ABOBUT ME CONTAINER -----------------------------------------*/
@@ -243,4 +247,8 @@ body{
     /* box-sizing: border-box;
     border-style: dashed;
     color: red; */
+}
+
+.iconcontainer img:hover{
+    animation: pulse 1s;
 }
