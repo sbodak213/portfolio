@@ -154,3 +154,7 @@ footer{
     grid-template-areas: 
     "a" "b" "c";
 }
+
+.iconcontainer img:hover{
+    animation: pulse 1s;
+}
